@@ -1,4 +1,4 @@
-import { Award, GraduationCap, Heart } from 'lucide-react';
+import { Award, Heart } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function SocialResponsibility() {
