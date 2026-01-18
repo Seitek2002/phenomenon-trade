@@ -1,0 +1,29 @@
+<svg
+    viewBox='0 0 100 100'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+>
+    <rect width='100' height='100' rx='12' fill='#1e3a5f' />
+
+    <text
+        x='50'
+        y='68'
+        fontFamily='Times New Roman, serif'
+        fontWeight='bold'
+        fontSize='100'
+        fill='white'
+        textAnchor='middle'
+        letterSpacing='-3'
+    >
+        ФТ
+    </text>
+
+    <path
+        d='M 15 75 Q 50 95 85 25'
+        stroke='white'
+        strokeWidth='3'
+        strokeLinecap='round'
+        fill='none'
+        opacity='0.9'
+    />
+</svg>
