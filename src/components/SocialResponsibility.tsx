@@ -12,12 +12,6 @@ export default function SocialResponsibility() {
       color: 'from-amber-500 to-orange-600',
     },
     {
-      icon: GraduationCap,
-      title: t('stability.team.title'),
-      description: t('stability.team.desc'),
-      color: 'from-blue-500 to-[#1e3a5f]',
-    },
-    {
       icon: Heart,
       title: t('stability.charity.title'),
       description: t('stability.charity.desc'),
@@ -37,7 +31,7 @@ export default function SocialResponsibility() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {initiatives.map((initiative, index) => (
             <div
               key={index}
