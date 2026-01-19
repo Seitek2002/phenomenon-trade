@@ -15,7 +15,6 @@ import dzhinnSeaSalt from '../assets/ProductPortfolio/джин_с_морской
 import dzhinnPremium from '../assets/ProductPortfolio/премиум_джин.jpg';
 import dzhinnKernels from '../assets/ProductPortfolio/очищенные_джин.jpg';
 import masterZharki from '../assets/ProductPortfolio/мастер_жарки_ароматно_обжаренные_семечки.jpg';
-import matreshka from '../assets/ProductPortfolio/semechki_podsolnechnika_zharenye_rumyanaya_matreshka_1.jpg';
 import peanutsPremium from '../assets/ProductPortfolio/arakhis_zharenyy_solyeniy_karavan_orekhov_premium.jpg';
 import peanutsStandard from '../assets/ProductPortfolio/arakhis_zharenyy_solyenyy_karavan_orekhov_standart.jpg';
 
@@ -96,13 +95,6 @@ export default function ProductPortfolio() {
       flavor: language === 'en' ? 'Roasted' : 'Обжаренные',
       image: masterZharki,
       color: 'from-amber-600 to-red-700', // Теплый красно-оранжевый
-    },
-    {
-      id: 11,
-      name: language === 'en' ? 'Matreshka' : 'Матрешка',
-      flavor: language === 'en' ? 'Traditional' : 'Традиционные',
-      image: matreshka,
-      color: 'from-red-500 to-rose-700', // Красный (под стиль матрешки)
     },
     {
       id: 12,
