@@ -17,6 +17,7 @@ import dzhinnKernels from '../assets/ProductPortfolio/очищенные_джи�
 import masterZharki from '../assets/ProductPortfolio/мастер_жарки_ароматно_обжаренные_семечки.jpg';
 import peanutsPremium from '../assets/ProductPortfolio/arakhis_zharenyy_solyeniy_karavan_orekhov_premium.jpg';
 import peanutsStandard from '../assets/ProductPortfolio/arakhis_zharenyy_solyenyy_karavan_orekhov_standart.jpg';
+
 export default function ProductPortfolio() {
   const { t, language } = useLanguage();
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
