@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { TrendingUp, X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
-// Импорт картинок согласно скриншоту
+// Импорт существующих картинок
 import giantClassic from '../assets/ProductPortfolio/семечки_джин_великан.webp';
 import giantSalt from '../assets/ProductPortfolio/семечки_джин_великан_соль.webp';
 import giantExtraSalt from '../assets/ProductPortfolio/великан_джин_особо_соленые.webp';
@@ -10,52 +10,113 @@ import pumpkin from '../assets/ProductPortfolio/джин_семечки_тыкв
 import cornBbq from '../assets/ProductPortfolio/кукуруза_со_вкусом_bbq.jpg';
 import cornCheese from '../assets/ProductPortfolio/кукуруза_со_вкусом_двойной_сыр.jpg';
 
+// Импорт НОВЫХ картинок
+import dzhinnSeaSalt from '../assets/ProductPortfolio/джин_с_морской_солью.jpg';
+import dzhinnPremium from '../assets/ProductPortfolio/премиум_джин.jpg';
+import dzhinnKernels from '../assets/ProductPortfolio/очищенные_джин.jpg';
+import masterZharki from '../assets/ProductPortfolio/мастер_жарки_ароматно_обжаренные_семечки.jpg';
+import matreshka from '../assets/ProductPortfolio/semechki_podsolnechnika_zharenye_rumyanaya_matreshka_1.jpg';
+import peanutsPremium from '../assets/ProductPortfolio/arakhis_zharenyy_solyeniy_karavan_orekhov_premium.jpg';
+import peanutsStandard from '../assets/ProductPortfolio/arakhis_zharenyy_solyenyy_karavan_orekhov_standart.jpg';
+
 export default function ProductPortfolio() {
   const { t, language } = useLanguage();
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
   const dzhinnProducts = [
+    // --- Существующие продукты ---
     {
       id: 1,
       name: language === 'en' ? 'Giant Classic' : 'Великан',
       flavor: language === 'en' ? 'Classic' : 'Классика',
       image: giantClassic,
-      color: 'from-gray-700 to-gray-900', // Темный фон для черной пачки
+      color: 'from-gray-700 to-gray-900',
     },
     {
       id: 2,
       name: language === 'en' ? 'Giant Salt' : 'Великан Соленые',
       flavor: language === 'en' ? 'Salted' : 'Соленые',
       image: giantSalt,
-      color: 'from-blue-600 to-blue-800', // Синий фон для синей пачки
+      color: 'from-blue-600 to-blue-800',
     },
     {
       id: 3,
       name: language === 'en' ? 'Giant Extra Salt' : 'Особо Соленые',
       flavor: language === 'en' ? 'Extra Salt' : 'Экстра Соль',
       image: giantExtraSalt,
-      color: 'from-red-600 to-red-800', // Красный фон
+      color: 'from-red-600 to-red-800',
     },
     {
       id: 4,
       name: language === 'en' ? 'Pumpkin Seeds' : 'Тыквенные',
       flavor: language === 'en' ? 'Salted' : 'Соленые',
       image: pumpkin,
-      color: 'from-green-600 to-emerald-800', // Зеленый фон
+      color: 'from-green-600 to-emerald-800',
     },
     {
       id: 5,
       name: language === 'en' ? 'Corn BBQ' : 'Кукуруза BBQ',
       flavor: language === 'en' ? 'BBQ' : 'Барбекю',
       image: cornBbq,
-      color: 'from-purple-600 to-purple-800', // Фиолетовый фон
+      color: 'from-purple-600 to-purple-800',
     },
     {
       id: 6,
       name: language === 'en' ? 'Corn Cheese' : 'Кукуруза Сыр',
       flavor: language === 'en' ? 'Cheese' : 'Сыр',
       image: cornCheese,
-      color: 'from-yellow-500 to-orange-600', // Желтый фон
+      color: 'from-yellow-500 to-orange-600',
+    },
+
+    // --- НОВЫЕ продукты ---
+    {
+      id: 7,
+      name: language === 'en' ? 'Dzhinn Sea Salt' : 'Джин Морская Соль',
+      flavor: language === 'en' ? 'Sea Salt' : 'Морская Соль',
+      image: dzhinnSeaSalt,
+      color: 'from-cyan-600 to-teal-700', // Бирюзовый для морской соли
+    },
+    {
+      id: 8,
+      name: language === 'en' ? 'Dzhinn Premium' : 'Джин Премиум',
+      flavor: language === 'en' ? 'Premium' : 'Премиум',
+      image: dzhinnPremium,
+      color: 'from-slate-800 to-black', // Строгий черный/серый
+    },
+    {
+      id: 9,
+      name: language === 'en' ? 'Dzhinn Kernels' : 'Джин Ядра',
+      flavor: language === 'en' ? 'Peeled' : 'Очищенные',
+      image: dzhinnKernels,
+      color: 'from-lime-600 to-green-700', // Ярко-зеленый
+    },
+    {
+      id: 10,
+      name: language === 'en' ? 'Master Zharki' : 'Мастер Жарки',
+      flavor: language === 'en' ? 'Roasted' : 'Обжаренные',
+      image: masterZharki,
+      color: 'from-amber-600 to-red-700', // Теплый красно-оранжевый
+    },
+    {
+      id: 11,
+      name: language === 'en' ? 'Matreshka' : 'Матрешка',
+      flavor: language === 'en' ? 'Traditional' : 'Традиционные',
+      image: matreshka,
+      color: 'from-red-500 to-rose-700', // Красный (под стиль матрешки)
+    },
+    {
+      id: 12,
+      name: language === 'en' ? 'Caravan Peanuts' : 'Караван Арахис',
+      flavor: language === 'en' ? 'Premium' : 'Премиум',
+      image: peanutsPremium,
+      color: 'from-amber-700 to-yellow-800', // Коричнево-золотой
+    },
+    {
+      id: 13,
+      name: language === 'en' ? 'Caravan Peanuts' : 'Караван Арахис',
+      flavor: language === 'en' ? 'Standard' : 'Стандарт',
+      image: peanutsStandard,
+      color: 'from-orange-600 to-amber-700', // Оранжево-коричневый
     },
   ];
 
@@ -86,7 +147,7 @@ export default function ProductPortfolio() {
               onClick={() => setIsGalleryOpen(true)}
               className='group bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-2xl border-2 border-orange-300 hover:border-orange-500 transition-all hover:shadow-2xl transform hover:scale-105 duration-300 w-full max-w-md relative overflow-hidden'
             >
-              {/* Используем одну из картинок для обложки кнопки */}
+              {/* Используем картинку Dzhinn Classic для обложки */}
               <div className='flex items-center justify-center h-48 mb-6 relative z-10'>
                 <img
                   src={giantClassic}
@@ -147,8 +208,8 @@ export default function ProductPortfolio() {
             <div className='sticky top-0 bg-gradient-to-r from-orange-500 to-yellow-500 p-6 flex items-center justify-between z-10 rounded-t-3xl'>
               <h3 className='text-3xl font-bold text-white'>
                 {language === 'en'
-                  ? 'Dzhinn Product Gallery'
-                  : 'Галерея Продуктов Джин'}
+                  ? 'Product Portfolio Gallery'
+                  : 'Галерея Продуктового Портфеля'}
               </h3>
               <button
                 onClick={() => setIsGalleryOpen(false)}
@@ -190,8 +251,8 @@ export default function ProductPortfolio() {
               <div className='mt-8 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-6 border-2 border-orange-200'>
                 <p className='text-center text-gray-700 text-lg'>
                   {language === 'en'
-                    ? 'Dzhinn - The most popular sunflower seed brand in Kyrgyzstan'
-                    : 'Джин - Самый популярный бренд семечек в Кыргызстане'}
+                    ? 'Our diverse portfolio covers all major snack categories'
+                    : 'Наш разнообразный портфель охватывает все основные категории снеков'}
                 </p>
               </div>
             </div>
